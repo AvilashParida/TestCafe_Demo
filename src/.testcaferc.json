@@ -1,0 +1,30 @@
+{
+    "src": [
+      "tests/**/*.ts",
+      "tests/**/*.feature"
+    ],
+    "browsers": [
+      "chrome:headless --allow-insecure-localhost"
+    ],
+    "concurrency": 4,
+    "reporter": [
+      {
+        "name": "cucumber-json",
+        "output": "results/report/report.json"
+      }
+    ],
+    "screenshotPath": "results/screenshots",
+    "start": "fullscreen",
+    "fullPage": true,
+    "debugMode": false,
+    "debugOnFail": false,
+    "skip-uncaught-errors": false,
+    "pageLoadTimeout": 5000,
+    "selectorTimeout": 5000,
+    "skipJsErrors": true,
+    "quarantineMode": false,
+    "color": true,
+    "speed": 1,
+    "hostname": "localhost"
+  }
+  

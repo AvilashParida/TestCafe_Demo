@@ -1,0 +1,45 @@
+{
+  "name": "testcafe_demo",
+  "version": "1.0.0",
+  "description": "Demo framework for testcafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e:all": "rm -rf src/results && rm -rf src/cucumber-json-reports && cd src && gherkin-testcafe --tags $npm_package_config_e2e_tags;npm run report",
+    "report": "node report-generator.js"
+  },
+  "config": {
+    "env": "demo",
+    "e2e_tags": "@regression,~@failed"
+  },
+  "author": "Avilash Parida",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^7.1.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@types/node": "^16.11.7",
+    "crypto-js": "^4.1.1",
+    "cucumber": "^5.1.0",
+    "dayjs": "^1.10.7",
+    "eslint": "^6.1.3",
+    "exceljs": "^4.3.0",
+    "gherkin-testcafe": "^4.0.0",
+    "husky": "^7.0.4",
+    "jshashes": "^1.0.8",
+    "log4js": "^6.4.1",
+    "multiple-cucumber-html-reporter": "^1.13.1",
+    "prettier": "^2.5.1",
+    "resemblejs": "^4.0.1",
+    "testcafe": "^1.18.3",
+    "testcafe-reporter-cucumber-json": "^6.3.0",
+    "testcafe-reporter-dashboard": "^0.2.5",
+    "testcafe-reporter-json": "^2.2.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.5",
+    "yamljs": "^0.3.0",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/cucumber": "^7.0.0"
+  }
+}
